@@ -12,6 +12,34 @@
   <body
     background="https://static.vecteezy.com/system/resources/previews/005/239/303/original/green-abstract-background-elegant-circle-shape-vector.jpg"
   >
+    <!-- NavBar -->
+    <header>
+      <div class="logo">HeyVos</div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="home">Home</a>
+          </li>
+          <li>
+            <a href="calendario">Calendario</a>
+          </li>
+          <li>
+            <a href="contador">Cuenta regresiva</a>
+          </li>
+          <li>
+            <a href="galeria">Galeria</a>
+          </li>
+          <li>
+            <a href="cuidados" class="active">Cuidados</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -171,5 +199,13 @@
       type="application/javascript"
       src="resources/js/cuidados.js"
     ></script>
+    <script>
+      let hamburger = document.querySelector(".hamburger");
+
+      hamburger.onclick = function () {
+        let navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+      };
+    </script>
   </body>
 </html>

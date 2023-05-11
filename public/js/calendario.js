@@ -26,3 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
   calendar.render();
   calendar.setOption("locale", "es");
 });
+
+let hamburger = document.querySelector(".hamburger");
+let calendario = document.querySelector(".calendar");
+// let navBar = document.querySelector(".nav-bar");
+
+hamburger.onclick = function () {
+  let navBar = document.querySelector(".nav-bar");
+  navBar.classList.toggle("active");
+
+  if (navBar.classList.contains("active")) {
+    calendario.style.display = "none";
+  } else {
+    calendario.style.display = "block";
+  }
+};

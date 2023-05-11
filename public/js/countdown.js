@@ -3,7 +3,7 @@ const hoursEl = document.getElementById("hours");
 const minsEl = document.getElementById("mins");
 const secondsEl = document.getElementById("seconds");
 
-const newEvent = "11 May 2023";
+const newEvent = "13 May 2023";
 
 function countdown() {
   const newEventDate = new Date(newEvent);
@@ -30,3 +30,10 @@ function formatTime(time) {
 countdown();
 
 setInterval(countdown, 1000);
+
+let hamburger = document.querySelector(".hamburger");
+
+hamburger.onclick = function () {
+  let navBar = document.querySelector(".nav-bar");
+  navBar.classList.toggle("active");
+};

@@ -10,6 +10,34 @@
   <body
     background="https://media.istockphoto.com/id/1207792106/es/foto/vi%C3%B1eta-acuarela-textura-fondo-pintado-a-mano-aqua-pincel-strokes.jpg?s=612x612&w=0&k=20&c=lrszY4-PFGSQH59vYuBaiTgVoMgDnllzsazlB6JuIFE="
   >
+    <!-- NavBar -->
+    <header>
+      <div class="logo">HeyVos</div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="home">Home</a>
+          </li>
+          <li>
+            <a href="calendario">Calendario</a>
+          </li>
+          <li>
+            <a href="contador">Cuenta regresiva</a>
+          </li>
+          <li>
+            <a href="galeria" class="active">Galeria</a>
+          </li>
+          <li>
+            <a href="cuidados">Cuidados</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <h1>Fotos de los eventos</h1>
     <span class="linea"></span>
     <section class="galeria">
@@ -113,5 +141,14 @@
       <a href="#image1" class="next">→</a>
       <a href="#" class="close">X</a>
     </article>
+
+    <script>
+      let hamburger = document.querySelector(".hamburger");
+
+      hamburger.onclick = function () {
+        let navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+      };
+    </script>
   </body>
 </html>
